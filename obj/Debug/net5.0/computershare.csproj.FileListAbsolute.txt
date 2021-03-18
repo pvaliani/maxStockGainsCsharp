@@ -1,0 +1,15 @@
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/computershare.deps.json
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/computershare.runtimeconfig.json
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/computershare.runtimeconfig.dev.json
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/computershare.dll
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/ref/computershare.dll
+/Users/pedram/Coding/computershare/bin/Debug/net5.0/computershare.pdb
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.csprojAssemblyReference.cache
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.AssemblyInfoInputs.cache
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.AssemblyInfo.cs
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.csproj.CoreCompileInputs.cache
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.dll
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/ref/computershare.dll
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.pdb
+/Users/pedram/Coding/computershare/obj/Debug/net5.0/computershare.genruntimeconfig.cache
