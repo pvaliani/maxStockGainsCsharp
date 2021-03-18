@@ -35,6 +35,11 @@ namespace computershare
             Console.WriteLine("  ----- THIS IS THE END OF DATASET 2 -----  ");
 
             // access the first element in the list
+            float testvalue1 = 30;
+            float testvaluefinal = testvalue1 + dataSet2asList[0];
+
+            Console.WriteLine(testvaluefinal);
+
             Console.WriteLine(dataSet2asList[0]);
 
 
