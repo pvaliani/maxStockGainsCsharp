@@ -16,8 +16,8 @@ namespace computershare
             DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
             List<Stock> stocks = month1.getDataSetValues();
 
-            DataSet month2 = new DataSet("ChallengeSampleDataSet2.txt");
-            List<Stock> stocks2 = month2.getDataSetValues();
+            // DataSet month2 = new DataSet("ChallengeSampleDataSet2.txt");
+            // List<Stock> stocks2 = month2.getDataSetValues();
 
 
         }
