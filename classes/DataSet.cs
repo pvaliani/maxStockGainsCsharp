@@ -21,16 +21,21 @@ namespace computershare.classes
         }
 
         public List<Stock> getDataSetValues(){
-               // reads the first dataset as a single string which can be deserialized
-            string pricesFromFile = System.IO.File.ReadAllText(@$"{filename}");
-            // System.Console.WriteLine("ChallengeSampleDataSet1 values= {0}", pricesFromFile);
 
-            // convert pricesFromFile string to a list of double values and send each value to the console
+            // reads the string data from the text file specified containing prices
+            string pricesFromFile = System.IO.File.ReadAllText(@$"{filename}");
+ 
+            // convert pricesFromFile string to a list of doubles, parsing out commas
             List<double> pricesAsList = pricesFromFile.Split(',').Select(double.Parse).ToList();
+
+            // sort the list in ascending order to be able to find the lowest and highest month price
             pricesAsList.Sort();
-            
+
+            // logs ordered prices to console - DELETE!
             pricesAsList.ForEach(Console.WriteLine);
-            
+
+
+            // initialise an index to track the price on a given day
             int index = 0; 
             List<Stock> stocks = new List<Stock>();
 
