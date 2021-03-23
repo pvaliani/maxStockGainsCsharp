@@ -33,7 +33,7 @@ namespace computershare.classes
             pricesAsList.Sort();
 
             // // logs ordered prices to console - DELETE!
-            pricesAsList.ForEach(Console.WriteLine);
+            // pricesAsList.ForEach(Console.WriteLine);
 
             // initialise an index to track the price of a stock on a given day
             int index = 0; 
@@ -54,10 +54,11 @@ namespace computershare.classes
                 index++;
             }
             return stocks;
+
+            List<Stock> sortedStocks = stocks.OrderBy(o=>o.getDay()).ToList();
+
         }
 
-
-        
 
     }
 

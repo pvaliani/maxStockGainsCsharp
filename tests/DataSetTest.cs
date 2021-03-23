@@ -80,17 +80,9 @@ public class DataSetTest
         27.39
     };
 
-
     Assert.Equal(pricesAsList, sorted );
 
-
-
-
     }
-
-
-
-
 
 }}
 

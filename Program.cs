@@ -16,10 +16,12 @@ namespace computershare
             DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
             List<Stock> stocks = month1.getDataSetStocks();
 
-            // foreach (Stock i in stocks)
-            // {
-            //     Console.WriteLine(i.day);
-            // }
+            foreach (Stock i in stocks)
+            {
+                Console.WriteLine(i.getDay());
+                Console.WriteLine(i.getPrice());
+                
+            }
             
 
             // DataSet month2 = new DataSet("ChallengeSampleDataSet2.txt");
