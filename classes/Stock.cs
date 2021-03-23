@@ -15,11 +15,9 @@ namespace computershare.classes
         public Stock(double price, int day){
             this.price = price;
             this.day = day;
-          
-
         }
 
-        // getters and setters for prices and the data set name
+        // getters and setters for prices and day
         public double getPrice() {
         return price;
         }
@@ -28,11 +26,11 @@ namespace computershare.classes
             this.price = price;
         }
 
-         public int getBuyDayOfMonth() {
+         public int getDay() {
              return day;
         }
 
-         public void setBuyDayOfMonth(int day) {
+         public void setDay(int day) {
             this.day = day;
         }
 
