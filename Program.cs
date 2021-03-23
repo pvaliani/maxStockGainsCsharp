@@ -20,7 +20,7 @@ namespace computershare
             List<Stock> sortedStocks = stocks.OrderBy(o=>o.getPrice()).ToList();
 
 
-            Console.WriteLine(sortedStocks);
+            
 
              foreach (Stock i in sortedStocks)
             {
@@ -29,15 +29,18 @@ namespace computershare
                 
             }
 
-            // int index = 0;
-            // foreach (var j in sortedStocks)
-            // {
-                if (sortedStocks[0].getDay() > sortedStocks[29].getDay()) {
-                    Console.WriteLine($"{sortedStocks[0].getDay()}({sortedStocks[0].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
+            Console.WriteLine("---------------SPACE HEREEEE------------------");
 
+            int index = 0;
+            foreach (var j in sortedStocks)
+            {
+                if (sortedStocks[index].getDay() < sortedStocks[29].getDay() && sortedStocks[index].getPrice() < sortedStocks[29].getPrice() ) {
+                    Console.WriteLine($"{sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
+                    double difference = sortedStocks[29].getPrice() - sortedStocks[index].getPrice();
+                    Console.WriteLine(difference);
             }
-            //    index++; 
-            // }
+               index++; 
+            }
 
             // for all the stocks in sortedStocks
             // if the current sorted stocks day is less than the last one in the sortedStocks
@@ -49,7 +52,7 @@ namespace computershare
 
             // the day of the buy price has to be less than the day of the sell price
             // i.e day of the buy price has to be less than sortedStocks.getDay at 30 or sortedstocks[30].getDay
-            // 19.13, day 7 and day 14, 27.2 are the answers for dataset2
+            // 19.66, day 7 and day 14, 27.2 are the answers for dataset2
 
             
                 
