@@ -34,10 +34,16 @@ namespace computershare.classes
             // logs ordered prices to console - DELETE!
             pricesAsList.ForEach(Console.WriteLine);
 
-
-            // initialise an index to track the price on a given day
+            // initialise an index to track the price of a stock on a given day
             int index = 0; 
+
             List<Stock> stocks = new List<Stock>();
+
+            // for each price in the list of stock prices
+            // the day is equal to the index +1
+            // create a new stock object that uses the current price and assign it a day which is its index pos +1
+            // add that stock to a list of stocks
+            // increase the index  by 1 each time
 
             foreach (var price in pricesAsList)
             {
