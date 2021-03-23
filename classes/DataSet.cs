@@ -30,7 +30,7 @@ namespace computershare.classes
 
             // sort the list in ascending order to be able to find the lowest and highest month price - currently this 
             // currently sorts the list of prices only
-            pricesAsList.Sort();
+            // pricesAsList.Sort();
 
             // // logs ordered prices to console - DELETE!
             // pricesAsList.ForEach(Console.WriteLine);
@@ -55,7 +55,7 @@ namespace computershare.classes
             }
             return stocks;
 
-            List<Stock> sortedStocks = stocks.OrderBy(o=>o.getDay()).ToList();
+            // List<Stock> sortedStocks = stocks.OrderBy(o=>o.getDay()).ToList();
 
         }
 

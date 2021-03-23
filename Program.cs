@@ -15,17 +15,24 @@ namespace computershare
 
             DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
             List<Stock> stocks = month1.getDataSetStocks();
+            List<Stock> sortedStocks = stocks.OrderBy(o=>o.getPrice()).ToList();
 
-            foreach (Stock i in stocks)
+            // foreach (Stock i in stocks)
+            // {
+            //     Console.WriteLine(i.getDay());
+            //     Console.WriteLine(i.getPrice());
+                
+            // }
+
+            Console.WriteLine(sortedStocks);
+
+             foreach (Stock i in sortedStocks)
             {
                 Console.WriteLine(i.getDay());
                 Console.WriteLine(i.getPrice());
                 
             }
-            
-
-            // DataSet month2 = new DataSet("ChallengeSampleDataSet2.txt");
-            // List<Stock> stocks2 = month2.getDataSetValues();
+    
 
 
         }
