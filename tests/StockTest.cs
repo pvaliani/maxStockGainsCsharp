@@ -16,7 +16,7 @@ public class StockTest
 {
     [Fact]
     
-    public void canGetStockPrice(){
+    public void canGetStockPriceFromStockObject(){
 
     Stock stock1 = new Stock(30.4, 0);
     
@@ -32,8 +32,6 @@ public class StockTest
     Assert.Equal(3, stock1.getDay());
     }
     
-
-
 
 
 }}

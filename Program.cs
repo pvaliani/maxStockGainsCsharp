@@ -14,7 +14,7 @@ namespace computershare
         {
 
             DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
-            List<Stock> stocks = month1.getDataSetValues();
+            List<Stock> stocks = month1.getDataSetStocks();
 
             // foreach (Stock i in stocks)
             // {

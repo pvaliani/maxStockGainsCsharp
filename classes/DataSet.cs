@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 
-
-
 namespace computershare.classes
 {
     public class DataSet
@@ -22,7 +20,7 @@ namespace computershare.classes
             return filename;
         }
 
-        public List<Stock> getDataSetValues(){
+        public List<Stock> getDataSetStocks(){
 
             // reads the string data from the text file specified containing prices
             string pricesFromFile = System.IO.File.ReadAllText(@$"{filename}");
@@ -31,7 +29,7 @@ namespace computershare.classes
             List<double> pricesAsList = pricesFromFile.Split(',').Select(double.Parse).ToList();
 
             // sort the list in ascending order to be able to find the lowest and highest month price - currently this 
-            // works on the list of prices rather than the stock objects 
+            // currently sorts the list of prices only
             pricesAsList.Sort();
 
             // // logs ordered prices to console - DELETE!
@@ -57,6 +55,9 @@ namespace computershare.classes
             }
             return stocks;
         }
+
+
+        
 
     }
 
