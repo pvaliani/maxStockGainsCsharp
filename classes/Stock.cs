@@ -7,11 +7,13 @@ using System.Linq;
 
 namespace computershare.classes
 {
+    
     public class Stock
     {
         private double price; 
         private int day;
 
+        // define a stock object as having a price and day associated with the opening price
         public Stock(double price, int day){
             this.price = price;
             this.day = day;
