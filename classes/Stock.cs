@@ -8,7 +8,7 @@ using System.Linq;
 namespace computershare.classes
 {
     
-    public class Stock
+    public class Stock 
     {
         private double price; 
         private int day;
