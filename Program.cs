@@ -13,80 +13,68 @@ namespace computershare
         static void Main(string[] args)
         {
 
-            DataSet month1 = new DataSet("ChallengeSampleDataSet2.txt");
-            List<Stock> stocks = month1.getDataSetStocks();
+            DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
+            DataSet month2 = new DataSet("ChallengeSampleDataSet2.txt");
+
+            List<Stock> stocksMonth1 = month1.getDataSetStocks();
+             List<Stock> stocksMonth2 = month2.getDataSetStocks();
+            
 
             // sort the stocks by ascending price, keeping note of their index position i.e day in the month
-            List<Stock> sortedStocks = stocks.OrderBy(o=>o.getPrice()).ToList();
+            List<Stock> sortedStocksMonth1 = stocksMonth1.OrderBy(o=>o.getPrice()).ToList();
+            List<Stock> sortedStocksMonth2 = stocksMonth1.OrderBy(o=>o.getPrice()).ToList();
 
-             foreach (Stock i in sortedStocks)
-            {
-                Console.WriteLine(i.getDay());
-                Console.WriteLine(i.getPrice());
-                
-            }
-
-            Console.WriteLine("---------------SPACE HEREEEE------------------");
-
-            List<Stock> validStocks = new List<Stock>();
-
+            // create indices to track the sortedStocksMonth1 objects and the ranking of the best stock combinations to make
             int index = 0;
             int index2  = 1;
-            foreach (var sortedStock in sortedStocks)
+
+            // loop through each sorted stock and because sortedStocksMonth1 has already been ordered by ascending price
+            // compare the day of the current stock against the highest stock prices day
+            // if the current stocks day is <= the last stock && its price is <= the price of the highest stock 
+            // console log the ranked order of best trades starting with the best trade at the top
+
+            Console.WriteLine("--------------START OF MONTH 1 STOCKS------------------------");
+
+            foreach (var sortedStock in sortedStocksMonth1)
             {
-                if (sortedStocks[index].getDay() <= sortedStocks[29].getDay() && sortedStocks[index].getPrice() <= sortedStocks[29].getPrice() ) {
-                    
-                    
-                    
-                    // Stock validStock = new Stock(sortedStocks[index].getPrice(), sortedStocks[index].getDay());
-                    // validStocks.Add(validStock);
-                    Console.WriteLine($"The #{index2} valid trade to make for gains is {sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
-                    // double difference = sortedStocks[29].getPrice() - sortedStocks[index].getPrice();
-                    // Console.WriteLine(difference);
+                if (sortedStocksMonth1[index].getDay() <= sortedStocksMonth1[29].getDay() && sortedStocksMonth1[index].getPrice() <= sortedStocksMonth1[29].getPrice() ) {
+            
+                    Console.WriteLine($"Month 1: #{index2} valid trade is {sortedStocksMonth1[index].getDay()}({sortedStocksMonth1[index].getPrice()}), {sortedStocksMonth1[29].getDay()}({sortedStocksMonth1[29].getPrice()})");
+        
                     index2++;
             }
                index++; 
             }
 
-            // Console.WriteLine($"The best trade to make for gains is {sortedStocks[0].getDay()}({sortedStocks[0].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
 
-            // Console.WriteLine(validStocks[0].getPrice());
-            // Console.WriteLine(validStocks[0].getDay());
+            Console.WriteLine("--------------END OF MONTH 1 STOCKS------------------------");
 
-            // Console.WriteLine(validStocks.Count);
-            // Console.WriteLine(validStocks[19].getPrice());
-            // Console.WriteLine(validStocks[19].getDay());
+            int index3 = 0;
+            int index4 = 1;
 
-            // Console.WriteLine(sortedStocks[0].getPrice());
-            // Console.WriteLine(sortedStocks[0].getDay());
+            Console.WriteLine("--------------START OF MONTH 2 STOCKS------------------------");
 
-            // Console.WriteLine(validStocks.Count);
-            // Console.WriteLine(sortedStocks[29].getPrice());
-            // Console.WriteLine(sortedStocks[29].getDay());
+              foreach (var sortedStock in sortedStocksMonth2)
+            {
+                if (sortedStocksMonth2[index3].getDay() <= sortedStocksMonth2[29].getDay() && sortedStocksMonth2[index3].getPrice() <= sortedStocksMonth2[29].getPrice() ) {
+            
+                    Console.WriteLine($"Month 2: #{index4} valid trade is {sortedStocksMonth2[index3].getDay()}({sortedStocksMonth2[index3].getPrice()}), {sortedStocksMonth2[29].getDay()}({sortedStocksMonth2[29].getPrice()})");
+        
+                    index4++;
+            }
+               index3++; 
+            }
 
-            // var min = sortedStocks.OrderBy(i => i.getPrice()).FirstOrDefault();
-            // var max = sortedStocks.OrderBy(i => i.getPrice()).LastOrDefault();
-
-            // var minDay = sortedStocks.OrderBy(i => i.getDay()).FirstOrDefault();
-            // var maxDay = sortedStocks.OrderBy(i => i.getDay()).LastOrDefault();
-
-            // Console.WriteLine(min.getPrice());
-            // Console.WriteLine(minDay.getDay());
-            // Console.WriteLine(max.getPrice());
-            // Console.WriteLine(maxDay.getDay());
-
-
-         
-
-           
+            Console.WriteLine("--------------END OF MONTH 2 STOCKS------------------------");
 
 
 
-            // for all the stocks in sortedStocks
-            // if the current sorted stocks day is less than the last one in the sortedStocks
-            // AND the current sorted stocks price is less than the last one in the sorted stocks
-            // print the results 
 
+
+
+
+            // ANSWER:
+            // The best trades to be made for each data set in the form buyDayOfMonth(price), sellDayOfMonth(price) are:
             // 15(15.28), 21(27.39) - for dataset 1
             // 7(19.66), 14(27.2) - for dataset 2
 
