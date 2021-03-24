@@ -31,45 +31,54 @@ namespace computershare
             List<Stock> validStocks = new List<Stock>();
 
             int index = 0;
+            int index2  = 1;
             foreach (var sortedStock in sortedStocks)
             {
                 if (sortedStocks[index].getDay() <= sortedStocks[29].getDay() && sortedStocks[index].getPrice() <= sortedStocks[29].getPrice() ) {
-                    Stock validStock = new Stock(sortedStocks[index].getPrice(), sortedStocks[index].getDay());
-                    validStocks.Add(validStock);
-                    // Console.WriteLine($"{sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
+                    
+                    
+                    
+                    // Stock validStock = new Stock(sortedStocks[index].getPrice(), sortedStocks[index].getDay());
+                    // validStocks.Add(validStock);
+                    Console.WriteLine($"The #{index2} trade to make for gains is {sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
                     // double difference = sortedStocks[29].getPrice() - sortedStocks[index].getPrice();
                     // Console.WriteLine(difference);
+                    index2++;
             }
                index++; 
             }
 
-            Console.WriteLine(validStocks[0].getPrice());
-            Console.WriteLine(validStocks[0].getDay());
+            // Console.WriteLine($"The best trade to make for gains is {sortedStocks[0].getDay()}({sortedStocks[0].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
+
+            // Console.WriteLine(validStocks[0].getPrice());
+            // Console.WriteLine(validStocks[0].getDay());
 
             // Console.WriteLine(validStocks.Count);
-            Console.WriteLine(validStocks[19].getPrice());
-            Console.WriteLine(validStocks[19].getDay());
+            // Console.WriteLine(validStocks[19].getPrice());
+            // Console.WriteLine(validStocks[19].getDay());
 
             // Console.WriteLine(sortedStocks[0].getPrice());
             // Console.WriteLine(sortedStocks[0].getDay());
 
             // Console.WriteLine(validStocks.Count);
-            Console.WriteLine(sortedStocks[29].getPrice());
-            Console.WriteLine(sortedStocks[29].getDay());
+            // Console.WriteLine(sortedStocks[29].getPrice());
+            // Console.WriteLine(sortedStocks[29].getDay());
 
+            // var min = sortedStocks.OrderBy(i => i.getPrice()).FirstOrDefault();
+            // var max = sortedStocks.OrderBy(i => i.getPrice()).LastOrDefault();
 
-         
-
-            // var min = validStocks.OrderBy(i => i.getPrice()).FirstOrDefault();
-            // var max = validStocks.OrderBy(i => i.getPrice()).LastOrDefault();
-
-            // var minDay = validStocks.OrderBy(i => i.getDay()).FirstOrDefault();
-            // var maxDay = validStocks.OrderBy(i => i.getDay()).LastOrDefault();
+            // var minDay = sortedStocks.OrderBy(i => i.getDay()).FirstOrDefault();
+            // var maxDay = sortedStocks.OrderBy(i => i.getDay()).LastOrDefault();
 
             // Console.WriteLine(min.getPrice());
             // Console.WriteLine(minDay.getDay());
             // Console.WriteLine(max.getPrice());
             // Console.WriteLine(maxDay.getDay());
+
+
+         
+
+           
 
 
 
@@ -78,7 +87,8 @@ namespace computershare
             // AND the current sorted stocks price is less than the last one in the sorted stocks
             // print the results 
 
-            // 15(15.28), 21(27.39) - for dataset 2
+            // 15(15.28), 21(27.39) - for dataset 1
+            // 7(19.66), 14(27.2) - for dataset 2
 
         
         }
