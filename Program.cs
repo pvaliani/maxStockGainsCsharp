@@ -20,7 +20,7 @@ namespace computershare
              List<Stock> stocksMonth2 = month2.getDataSetStocks();
             
 
-            // sort the stocks by ascending price, keeping note of their index position i.e day in the month
+            // sort the stocks by ascending price, keeping track of their index position i.e day in the month
             List<Stock> sortedStocksMonth1 = stocksMonth1.OrderBy(o=>o.getPrice()).ToList();
             List<Stock> sortedStocksMonth2 = stocksMonth1.OrderBy(o=>o.getPrice()).ToList();
 
@@ -66,11 +66,6 @@ namespace computershare
             }
 
             Console.WriteLine("--------------END OF MONTH 2 STOCKS------------------------");
-
-
-
-
-
 
 
             // ANSWER:
