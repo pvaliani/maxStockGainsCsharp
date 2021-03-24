@@ -13,7 +13,7 @@ namespace computershare
         static void Main(string[] args)
         {
 
-            DataSet month1 = new DataSet("ChallengeSampleDataSet1.txt");
+            DataSet month1 = new DataSet("ChallengeSampleDataSet2.txt");
             List<Stock> stocks = month1.getDataSetStocks();
 
             // sort the stocks by ascending price, keeping note of their index position i.e day in the month
@@ -40,7 +40,7 @@ namespace computershare
                     
                     // Stock validStock = new Stock(sortedStocks[index].getPrice(), sortedStocks[index].getDay());
                     // validStocks.Add(validStock);
-                    Console.WriteLine($"The #{index2} trade to make for gains is {sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
+                    Console.WriteLine($"The #{index2} valid trade to make for gains is {sortedStocks[index].getDay()}({sortedStocks[index].getPrice()}), {sortedStocks[29].getDay()}({sortedStocks[29].getPrice()})");
                     // double difference = sortedStocks[29].getPrice() - sortedStocks[index].getPrice();
                     // Console.WriteLine(difference);
                     index2++;
